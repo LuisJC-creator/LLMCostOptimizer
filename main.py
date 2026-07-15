@@ -14,15 +14,13 @@ def request():
     }
 
     url = "http://localhost:11434/api/generate"
-    # the url: http://localhost:11434/api/generate, not sure where it goes
-    # the json= thing is confusing, elaborate please.
+    # Post request format is url, the json converted dict, and a manual setting of the timeout to allow ample time for LLM responses.
     response = httpx.post(url, json=params, timeout=60)
     print("Request Sent")
     print(response.json())
 
-# I recall python needs some kind of __main__ or something to actually
-# run, lets see how rusty I am. Going to try running it like this.
 
+# Python's entry-point idiom, distinguishes "ran directly" from "imported by another file" (doesn't exist in Rust/C++)
 
 if __name__ == "__main__":
     request()
