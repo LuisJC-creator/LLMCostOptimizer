@@ -64,8 +64,9 @@ Generating a plan for the initial steps of the project using Opus based on some 
 Opus generated a plan with a few flaws that I fixed.
 
 **What I asked AI, and what I did with the answer (used it, adapted it, rejected it):**
-I asked Fable about the plan's structure, architecturally it fit well but it had one major issue. In the model config dataclass, it had one field -> cost_per_1k instead of having input and output costs each as individual fields. It additionally had the wrong formula using this variable when calculating cost in the Response section. 
+I asked Fable about the plan's structure, architecturally it fit well but it had one major issue. In the model config dataclass, it had one field -> cost_per_1k instead of having input and output costs each as individual fields. It additionally had the wrong formula using this variable when calculating cost in the Response section. I recognized this from prior knowledge since I know models have differnet output/input costs as the computational power necessary to generate an output is far higher than the cost to read a prompt. I accepted most of Opus's initial draft save for that bug with the ModelConfig as most of the first output passed the scrutiny test.
 
 **What I'd tell a freshman about this:**
+The goal is always to build expertise in whatever you are working with. Applying general scrutiny to model output is always good practice. If you aren't sure about something, consult the docs, consult a stronger model, and when working with AI including the model in the planning phase is certainly important.
 
 ---
