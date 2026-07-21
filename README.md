@@ -35,4 +35,4 @@ guidelines while exploring generative AI use:
 
 The intent is a transparent build log where AI is a documented tool, and where 
 reaching the middleground of efficiency while building a strong understanding
-of the foundations.
+of the foundations is the goal.
