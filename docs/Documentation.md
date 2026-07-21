@@ -32,8 +32,8 @@
 ### [LC] Entry — 2026-07-15
 
 
-**Time / what I was doing:**
-4:30 PM: I was writing a simple test post request to the llama server on my machine.
+**What I was doing:**
+I was writing a simple test post request to the llama server on my machine.
 
 **What happened (error, success, decision):**
 I ran into some syntax and python specific errors, including .venv setup and installation mishaps.
@@ -52,3 +52,20 @@ Making sure you understand every line of your code starts like this (especially 
 Don't build your projects on a fragile base of understanding from reading output, have a strong foundation (for me it's writing new
 concepts entirely on my own) (method might change/update in later entries).
 
+---
+
+### [LC] Entry — 2026-07-21
+
+(no previous entry due to it just being a folder restructuring)
+**What I was doing:**
+Generating a plan for the initial steps of the project using Opus based on some Fable architecture suggestions.
+
+**What happened (error, success, decision):**
+Opus generated a plan with a few flaws that I fixed.
+
+**What I asked AI, and what I did with the answer (used it, adapted it, rejected it):**
+I asked Fable about the plan's structure, architecturally it fit well but it had one major issue. In the model config dataclass, it had one field -> cost_per_1k instead of having input and output costs each as individual fields. It additionally had the wrong formula using this variable when calculating cost in the Response section. 
+
+**What I'd tell a freshman about this:**
+
+---
