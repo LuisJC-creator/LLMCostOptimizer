@@ -20,9 +20,13 @@ class Response:
     prompt_tokens: int
     completion_tokens: int
     total_tokens: int
-    cost: float
     latency_ms: float
     ok: bool = True
     error: str | None = None
     raw: dict | None = None
 
+    def cost(self, config: ModelConfig) -> float:
+        return (
+            (self.prompt_tokens / 1_000_000) * config.cost_in_per_million
+            + (self.completion_tokens / 1_000_000) * config.cost_out_per_million
+        )
